@@ -55,6 +55,11 @@
 			<artifactId>spring-cloud-azure-starter-active-directory</artifactId>
 		</dependency>
     <dependency>
+			<groupId>com.azure.spring</groupId>
+			<artifactId>azure-spring-boot-starter-cosmos</artifactId>
+			<version>3.8.0</version>
+		</dependency>
+    <dependency>
       <!-- Include the sdk as a dependency -->
       <groupId>com.microsoft.graph</groupId>
       <artifactId>microsoft-graph</artifactId>
