@@ -1,4 +1,5 @@
 body{
+  background-color: rgb(54, 236, 197);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -56,5 +57,3 @@ body{
   .message p{
     margin: 0 !important;
   }
-
-
