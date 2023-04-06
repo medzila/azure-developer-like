@@ -23,6 +23,10 @@ public class FormController {
 	@Value("${app.title}")
 	private String appTitle;
 
+	// /!\ This property is only found in Azure Configuration Settings
+	@Value("${testGhost}")
+	private String testGhost;
+
 	@Autowired
 	UserFeedbackRepository repository;
 
@@ -32,6 +36,7 @@ public class FormController {
 
 		model.addAttribute("form", new Form());
 		model.addAttribute("appTitle", appTitle);
+		model.addAttribute("testGhost", testGhost);
 		model.addAttribute("userName", auth.getName());
 		model.addAttribute("feedbacks", feedbacks);
 		model.addAttribute("message", null);
@@ -45,6 +50,7 @@ public class FormController {
 			OAuth2User principal = auth.getPrincipal();
 			String userId = principal.getAttribute("oid");
 			model.addAttribute("appTitle", appTitle);
+			model.addAttribute("testGhost", testGhost);
 			model.addAttribute("userName", auth.getName());
 
 			if (form.getTitle() == null || form.getTitle().isEmpty() || form.getComment() == null
